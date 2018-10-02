@@ -16,5 +16,10 @@ namespace AppForm
         {
             InitializeComponent();
         }
+
+        private void Products_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("Form loaded");
+        }
     }
 }
