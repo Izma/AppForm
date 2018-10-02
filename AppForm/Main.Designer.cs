@@ -37,6 +37,9 @@
             this.BtnClose = new System.Windows.Forms.PictureBox();
             this.CollapseButton = new System.Windows.Forms.PictureBox();
             this.Container = new System.Windows.Forms.Panel();
+            this.btnProductos = new System.Windows.Forms.Button();
+            this.btnVentas = new System.Windows.Forms.Button();
+            this.MenuLeft.SuspendLayout();
             this.Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimize)).BeginInit();
@@ -48,6 +51,8 @@
             // MenuLeft
             // 
             this.MenuLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            this.MenuLeft.Controls.Add(this.btnVentas);
+            this.MenuLeft.Controls.Add(this.btnProductos);
             this.MenuLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuLeft.Location = new System.Drawing.Point(0, 0);
             this.MenuLeft.Name = "MenuLeft";
@@ -67,6 +72,7 @@
             this.Header.Name = "Header";
             this.Header.Size = new System.Drawing.Size(550, 50);
             this.Header.TabIndex = 1;
+            this.Header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Header_MouseDown);
             // 
             // BtnMaximize
             // 
@@ -140,7 +146,40 @@
             this.Container.Size = new System.Drawing.Size(550, 299);
             this.Container.TabIndex = 2;
             // 
-            // Form1
+            // btnProductos
+            // 
+            this.btnProductos.FlatAppearance.BorderSize = 0;
+            this.btnProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductos.ForeColor = System.Drawing.Color.White;
+            this.btnProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnProductos.Image")));
+            this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProductos.Location = new System.Drawing.Point(0, 71);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Size = new System.Drawing.Size(250, 75);
+            this.btnProductos.TabIndex = 0;
+            this.btnProductos.Text = "&Productos";
+            this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
+            // 
+            // btnVentas
+            // 
+            this.btnVentas.FlatAppearance.BorderSize = 0;
+            this.btnVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVentas.ForeColor = System.Drawing.Color.White;
+            this.btnVentas.Image = ((System.Drawing.Image)(resources.GetObject("btnVentas.Image")));
+            this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVentas.Location = new System.Drawing.Point(0, 152);
+            this.btnVentas.Name = "btnVentas";
+            this.btnVentas.Size = new System.Drawing.Size(250, 75);
+            this.btnVentas.TabIndex = 1;
+            this.btnVentas.Text = "&Ventas";
+            this.btnVentas.UseVisualStyleBackColor = true;
+            // 
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -149,8 +188,9 @@
             this.Controls.Add(this.Header);
             this.Controls.Add(this.MenuLeft);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "Main";
             this.Text = "Form1";
+            this.MenuLeft.ResumeLayout(false);
             this.Header.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BtnMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimize)).EndInit();
@@ -171,6 +211,8 @@
         private System.Windows.Forms.PictureBox BtnMin;
         private System.Windows.Forms.PictureBox BtnMinimize;
         private System.Windows.Forms.PictureBox BtnMaximize;
+        private System.Windows.Forms.Button btnProductos;
+        private System.Windows.Forms.Button btnVentas;
     }
 }
 
